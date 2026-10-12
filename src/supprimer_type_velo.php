@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="/assets/style.css">
 <head>
 	<title>Supprimer type de v&eacute;lo</title>
 </head>
@@ -29,9 +29,7 @@
 
 	<?php
 	if (isset($_GET['id_type_velo'])){
-		$db_user = "s160180";
-		$db= "mschyns_s160180";
-		$db_pass = "mrhxz46474";
+		require_once __DIR__ . '/../private/secrets.php';
 		$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 		
 		if (mysqli_connect_errno()){

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="./style.css">
+<link rel="stylesheet" type="text/css" href="/assets/style.css">
 <head>
 	<title>Ajouter une ville</title>
 </head>
@@ -32,14 +32,12 @@
 		if (isset($_POST['id_ville'])){	
 		$id_ville= $_POST["id_ville"];
 		$code_postal= $_POST["code_postal"];
-		$nom_ville= $_POST["nom_ville"];;
+		$nom_ville= $_POST["nom_ville"];
 	
 		if($_POST["id_ville"] == ''|| $_POST["code_postal"] == ''|| $_POST["nom_ville"] == ''){
 			echo "<center class=\"alert\">R&eacute;f&eacute;rence de la ville, code postal ou le nom de la ville ne peuvent pas &ecirc;tre vides.</center>";
 		}else{
-			$db_user = "s160180";
-			$db= "mschyns_s160180";
-			$db_pass = "mrhxz46474";
+			require_once __DIR__ . '/../private/secrets.php';
 			$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 		
 			if (mysqli_connect_errno()){
