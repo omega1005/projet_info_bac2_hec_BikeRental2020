@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Ajouter un client</title>
 </head>
 <body>
@@ -16,9 +16,9 @@
 		</ul>
 	</div>
 	<div>
-	<h2 align ="center"> Nouveau Client</h2> 
+	<h2 align ="center">Nouveau Client</h2> 
 
-	<form name="client_insert" action="ajouter_client.php" " method="post">
+	<form name="client_insert" action="ajouter_client.php" method="post">
 	<table align="center" border=0>
 
 	<tr><td align=right>R&eacute;f&eacute;rence du client</td><td><input type="text" name="id_client" placeholder="NOM du client-XXXX"></td></tr>
@@ -28,12 +28,13 @@
 	<tr><td align=right>T&eacute;l&eacute;phone</td><td><input type="text" name="telephone"></td></tr>
 	<tr><td align=right>Email </td><td><input type="text" name="email"></td></tr> 
 	<tr><td align=right>Ville </td><td><select name="id_ville">
+	
 	<?php
 		require_once __DIR__ . '/../private/secrets.php';
 		$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 		if (mysqli_connect_errno()){
-		echo "Failed to connect to MySQL: " . mysqli_connect_error();
+			echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		}
 
 		$result_option = mysqli_query($con, "SELECT id_ville FROM Ville");
@@ -49,6 +50,7 @@
 
 	</select></td></tr>
 	<tr><td align=right><input type="submit" name="sub_btn" value="Ajouter"></td><td><input type="reset" name="res_btn" value="R&eacute;initialiser"></td></tr>
+	</table>
 	</form>
 
 	<?php
@@ -68,7 +70,7 @@
 			$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 			if (mysqli_connect_errno()){
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 			if (mysqli_query($con,"INSERT INTO Client (id_client, nom, prenom, email, telephone, date_naissance, id_ville) VALUES ('$id_client', '$nom', '$prenom','$email', '$telephone','$date_naissance', '$id_ville')")){
 				echo "<center>Client rajout&eacute; dans la base de donn&eacute;es</center> <br>"; 		

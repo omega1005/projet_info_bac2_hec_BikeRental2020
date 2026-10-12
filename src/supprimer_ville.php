@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Supprimer ville</title>
 </head>
 <body>
@@ -37,7 +37,7 @@
 		}
 		
 		$id_ville = $_GET["id_ville"];		
-				
+		
 		if (!mysqli_query($con,"DELETE FROM Ville WHERE id_ville = '".$id_ville."'")){
 			die('Erreur: ' . mysqli_error($con));
 		}else{

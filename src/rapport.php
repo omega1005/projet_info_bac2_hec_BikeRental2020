@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Rapport</title>
 </head>
 <body>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Modifier Client</title>
 </head>
 <body>
@@ -79,8 +79,8 @@
 		echo "<tr><td align=right>Email: </td><td><input type=\"text\" name=\"email\" value=\"".$email."\"></td></tr>";
 		echo "<tr><td align=right>T&eacute;l&eacute;phone: </td><td><input type=\"text\" name=\"telephone\" value=\"".$telephone."\"></td></tr>";
 		echo "<tr><td align=right>Ville: </td><td><select name=\"id_ville\" value=\"".$id_ville."\">";
-				
-				$result_option = mysqli_query($con, "SELECT id_ville FROM Ville");
+			
+			$result_option = mysqli_query($con, "SELECT id_ville FROM Ville");
 			while($row = mysqli_fetch_array($result_option)){
 				if ($row['id_ville'] == $id_ville){
 					echo "<option value=\"".$row['id_ville']."\" selected>".$row['id_ville']."</option>";
@@ -88,7 +88,7 @@
 					echo "<option value=\"".$row['id_ville']."\">".$row['id_ville']."</option>";
 				}
 			}
-					
+			
 		echo "</select>";
 		echo "</td></tr>";			
 		echo "<tr><td align=right><input type=\"submit\" name=\"save_btn\" value=\"Modifier\"></td><td><input type=\"reset\" name=\"res_btn\" value=\"R&eacute;initialiser\"></td></tr>";

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Ajouter une location</title>
 </head>
 <body>
@@ -81,6 +81,7 @@
 
 	</select></td></tr>
 	<tr><td align=right><input type="submit" name="sub_btn" value="Ajouter"></td><td><input type="reset" name="res_btn" value="R&eacute;initialiser"></td></tr>
+	</table>
 	</form>
 
 	<?php
@@ -100,7 +101,7 @@
 			$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 			if (mysqli_connect_errno()){
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 			if (mysqli_query($con,"INSERT INTO Location (id_location, date_location, duree_location, prix_location, id_client, id_velo, id_responsable) VALUES ('$id_location', '$date_location', '$duree_location','$prix_location', '$id_client', '$id_velo', '$id_responsable')")){
 				echo "<center>Location rajout&eacute; dans la base de donn&eacute;es</center> <br>";

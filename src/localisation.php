@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Localisations</title>
 </head>
 <body>
@@ -29,7 +29,7 @@
 		$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 		if(mysqli_connect_errno()){
-		echo "Failed to connect to MySQL: ".mysqli_connect_error();
+			echo "Failed to connect to MySQL: ".mysqli_connect_error();
 		}
 		
 		$requete = "SELECT id_localisation, nom_loc, description, id_ville FROM Localisation";

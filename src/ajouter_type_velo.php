@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Ajouter un type de v&eacute;lo</title>
 </head>
 <body>
@@ -25,6 +25,7 @@
 	<tr><td align=right>Type de v&eacute;lo</td><td><input type="text" name="type" placeholder="TYP-XXX"></td></tr> 
 
 	<tr><td align=right><input type="submit" name="sub_btn" value="Ajouter"></td><td><input type="reset" name="res_btn" value="R&eacute;initialiser"></td></tr>
+	</table>
 	</form>
 
 	<?php
@@ -39,7 +40,7 @@
 			$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 			if (mysqli_connect_errno()){
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 			if (mysqli_query($con,"INSERT INTO Type_velo (id_type_velo, type) VALUES ('$id_type_velo', '$type')")){
 				echo "<center>Type de v&eacute;lo rajout&eacute; dans la base de donn&eacute;es</center> <br>";

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Rapport</title>
 </head>
 <body>
@@ -38,7 +38,7 @@
 		
 		$requete = "SELECT id_location, date_location, prix_location, sum(prix_location) as 'prix_location', count(id_location) as 'id_location' FROM Location GROUP BY MONTH(date_location)";
 		$result = mysqli_query($con,$requete);
-					
+		
 		echo "<table width=\"200\" class=\"list\">";
 		echo "<th>Mois</th><th>CA du mois</th><th>Nombre de localtion</th>";
 		while($row = mysqli_fetch_array($result)){
@@ -52,7 +52,7 @@
 	echo "<br><br>";
 	echo "<strong>Le CA Total est 2825 euros</strong>";
 	mysqli_close($con);
-		
+	
 	?>
 	</div>	
 </div>

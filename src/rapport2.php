@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Rapport</title>
 </head>
 <body>
@@ -36,10 +36,10 @@
 		if (mysqli_connect_errno()){
 			echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		}
-				
+		
 		$requete = "SELECT id_type_velo, prix_velo, Velo.id_velo as 'id_velo', count(Location.id_location) as 'id_location', sum(Location.prix_location) as 'prix_location' FROM Velo, Location WHERE Velo.id_velo=Location.id_velo GROUP BY Velo.id_velo";
 		$result = mysqli_query($con,$requete);
-			
+		
 	
 		echo "<table width=\"200\" class=\"list\">";
 		echo "<th>R&eacute;f&eacute;rence du v&eacute;lo</th><th>Type de v&eacute;lo</th><th>Nombre de location</th><th>Recette des locations</th><th>Prix du v&eacute;lo</th><th></th>";

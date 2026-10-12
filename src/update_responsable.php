@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Modifier responsable</title>
 </head>
 <body>
@@ -28,7 +28,6 @@
 	
 	<?php
 	if (isset($_GET['id_responsable'])){
-		
 		require_once __DIR__ . '/../private/secrets.php';
 		$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 			

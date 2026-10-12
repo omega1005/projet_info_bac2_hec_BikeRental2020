@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Modifier location</title>
 </head>
 <body>
@@ -28,10 +28,9 @@
 	
 	<?php
 	if (isset($_GET['id_location'])){
-		
 		require_once __DIR__ . '/../private/secrets.php';
 		$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
-			
+		
 		if (mysqli_connect_errno()){
 			echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		}
@@ -91,7 +90,7 @@
 		echo "<tr><td align=right>R&eacute;f&eacute;rence du v&eacute;lo: </td><td><select name=\"id_velo\" value=\"".$id_velo."\">";
 			$result_option = mysqli_query($con, "SELECT DISTINCT id_velo, id_localisation FROM Velo ORDER BY id_velo");
 			while($row = mysqli_fetch_array($result_option)){
-					echo "<option value=\"".$row['id_velo']."\">".$row['id_velo']." (".$row['id_localisation'].")</option>";
+				echo "<option value=\"".$row['id_velo']."\">".$row['id_velo']." (".$row['id_localisation'].")</option>";
 			}	
 		echo "</select>";
 		echo "<tr><td align=right>R&eacute;f&eacute;rence du responsable: </td><td><select name=\"id_responsable\" value=\"".$id_responsable."\">";

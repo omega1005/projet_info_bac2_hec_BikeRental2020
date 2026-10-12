@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
-<meta charset="UTF-8">
-<link rel="stylesheet" type="text/css" href="/assets/style.css">
+<html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="/assets/style.css">
 	<title>Ajouter un responsable</title>
 </head>
 <body>
@@ -29,6 +29,7 @@
 	<tr><td align=right>Date de naissance </td><td><input type="date" name="date_naissance"></td></tr>
 
 	<tr><td align=right><input type="submit" name="sub_btn" value="Ajouter"></td><td><input type="reset" name="res_btn" value="R&eacute;initialiser"></td></tr>
+	</table>
 	</form>
 
 	<?php
@@ -47,7 +48,7 @@
 			$con= mysqli_connect("php2.hec.ulg.ac.be",$db_user,$db_pass,$db);
 
 			if (mysqli_connect_errno()){
-			echo "Failed to connect to MySQL: " . mysqli_connect_error();
+				echo "Failed to connect to MySQL: " . mysqli_connect_error();
 			}
 			if (mysqli_query($con,"INSERT INTO Responsable (id_responsable, nom, prenom, email, telephone, date_naissance) VALUES ('$id_responsable', '$nom', '$prenom','$email', '$telephone','$date_naissance')")){
 				echo "<center>Responsable rajout&eacute; dans la base de donn&eacute;es</center> <br>";
